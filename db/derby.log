@@ -1,7 +1,7 @@
-Tue May 02 20:02:58 BRT 2017 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
+Fri May 05 18:55:05 BRT 2017 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Tue May 02 20:03:03 BRT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-015b-cb66-df9d-00001a90d504 
+Fri May 05 18:55:10 BRT 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-015b-da9b-cc7f-00001a90d504 
 on database directory /Users/rabah/Box Sync/Mackenzie/4 sem/Linguagem de programação III - Lab/project/db/db_consulta with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
 Loaded from file:/Applications/NetBeans/glassfish-4.1.1/javadb/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -12,26 +12,3 @@ os.arch=x86_64
 os.version=10.12.4
 derby.system.home=/Users/rabah/Box Sync/Mackenzie/4 sem/Linguagem de programação III - Lab/project/db
 Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Tue May 02 20:03:13 BRT 2017:
-Shutting down instance a816c00e-015b-cb66-df9d-00001a90d504 on database directory /Users/rabah/Box Sync/Mackenzie/4 sem/Linguagem de programação III - Lab/project/db/db_consulta with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
-Tue May 02 20:03:13 BRT 2017 Thread[DRDAConnThread_2,5,main] (DATABASE = db_consulta), (DRDAID = {2}), Database 'db_consulta' shutdown.
-----------------------------------------------------------------
-Tue May 02 20:03:26 BRT 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 560740aa-015b-cb66-df9d-00001a90d504 
-on database directory /Users/rabah/Box Sync/Mackenzie/4 sem/Linguagem de programação III - Lab/project/db/db_consulta with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
-Loaded from file:/Applications/NetBeans/glassfish-4.1.1/javadb/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_131-b11
-user.dir=/Applications/NetBeans/glassfish-4.1.1/javadb
-os.name=Mac OS X
-os.arch=x86_64
-os.version=10.12.4
-derby.system.home=/Users/rabah/Box Sync/Mackenzie/4 sem/Linguagem de programação III - Lab/project/db
-Database Class Loader started - derby.database.classpath=''
-----------------------------------------------------------------
-Tue May 02 20:23:00 BRT 2017: Shutting down Derby engine
-----------------------------------------------------------------
-Tue May 02 20:23:00 BRT 2017:
-Shutting down instance 560740aa-015b-cb66-df9d-00001a90d504 on database directory /Users/rabah/Box Sync/Mackenzie/4 sem/Linguagem de programação III - Lab/project/db/db_consulta with class loader sun.misc.Launcher$AppClassLoader@66d3c617 
-----------------------------------------------------------------

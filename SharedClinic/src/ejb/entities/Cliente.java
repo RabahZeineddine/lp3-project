@@ -9,9 +9,9 @@ import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -24,7 +24,7 @@ public class Cliente extends Usuario implements Serializable{
 //    @XmlElement(name = "rg")
     private String rg;
 
-    @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,orphanRemoval = true, cascade = CascadeType.ALL)
     @JoinColumn(name = "CLIENTE_ID")
     private List<Consulta> consultas;
 

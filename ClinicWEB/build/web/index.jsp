@@ -13,31 +13,40 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
         
         <p>${alert}</p>
         <p>${error}</p>
-         
-        <form action="${pageContext.request.contextPath}/FrontControllerServlet?control=Usuario&fn=criar" method="POST">
-            
-            <input type="text" name="nome" />
-            <input type="text" name="sobrenome"/>
-            <input type="submit" value="criar"/>
-        </form>
-        
+
         <h2>REST request via js</h2>
+        <h3>Create user</h3>
             <input type="text" name="nome" id="nome"  placholder="nome"/>
             <input type="text" name="sobrenome" id="sobrenome" placeholder="sobrenome"/></br>
             <input type="email" id="email" placeholder="email"/></br>
             <input type="password" id="senha" placeholder="senha"/></br>
             <input type="text" id="cpf" placeholder="cpf"/></br>
-            <input type="text" id="usuario" placeholder="usuario"/></br>
             <input type="text" id="endereco" placeholder="endereco"/></br>
             <input type="text" id="telefone" placeholder="telefone"/></br>
-            <input type="text" id="rg" placeholder="rg"/></br>
+            <input type="radio" name="userType" value="cliente" onchange="radioChange(this)"/> Cliente
+            <input type="radio" name="userType" value="medico" onchange="radioChange(this)"/> Medico
+            <div id="newInput"></div>
+            <input type="button" value="criar" id="login-btn" onclick="createUser()" disabled/>
+            <br><br>
+            <h3>Login form</h3>
+            <input type="email" placeholder="Email" id="login_email"/><br>
+            <input type="password" placeholder="password" id="login_password"/>
+            <input type="button" value="Log in" onclick="loginUser()"/>
             
-            <input type="button" value="criar" onclick="createUser()"/>
             
+            <br><br>
+            <h3>Update profile</h3>
+            <div id="update_form"><h6> aparece quando loggar..</h6></div>
+            
+            <h3>Log out </h3>
+            <div id="logout_button"><h6> aparece quando loggar..</h6></div>
+            
+            <h3>Delete user</h3>
+            <div id="delete_button"><h6> aparece quando loggar..</h6></div>
             <script src="js/util.js"></script>
             <script src="js/custom.js"></script>
         

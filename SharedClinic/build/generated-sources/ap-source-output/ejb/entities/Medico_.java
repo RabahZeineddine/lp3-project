@@ -8,6 +8,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Medico.class)
 public abstract class Medico_ extends ejb.entities.Usuario_ {
 
+	public static volatile SingularAttribute<Medico, Especialidade> especialidade;
 	public static volatile SingularAttribute<Medico, Agenda> agenda;
 	public static volatile SingularAttribute<Medico, String> crm;
 

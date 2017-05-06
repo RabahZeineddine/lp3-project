@@ -15,4 +15,6 @@ import javax.ejb.Remote;
 @Remote
 public interface UsuarioBeanRemote {
     Usuario criarUsuario(Usuario u);
+    Usuario findByEmail(String email);
+    Usuario findByCPF(String cpf);
 }

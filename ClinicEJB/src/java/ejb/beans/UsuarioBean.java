@@ -9,6 +9,7 @@ import ejb.entities.Usuario;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 /**
  *
@@ -28,6 +29,22 @@ public class UsuarioBean implements UsuarioBeanRemote {
         em.persist(u);
         em.flush();
         em.refresh(u);
+        return u;
+    }
+
+    @Override
+    public Usuario findByEmail(String email) {
+        Query query = em.createNamedQuery("Usuario.findByEmail").setParameter("email", email);
+        Usuario u = null;
+        u = (Usuario) query.getResultList().get(0);
+        return u;
+    }
+
+    @Override
+    public Usuario findByCPF(String cpf) {
+        Query query = em.createNamedQuery("Usuario.findByCPF").setParameter("cpf", cpf);
+        Usuario u = null;
+        u = (Usuario) query.getResultList().get(0);
         return u;
     }
 }

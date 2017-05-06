@@ -6,6 +6,8 @@
 package ejb.beans.rest;
 
 import ejb.entities.Cliente;
+import ejb.entities.Medico;
+import ejb.entities.Usuario;
 import javax.ejb.Local;
 import org.json.simple.JSONObject;
 
@@ -16,6 +18,9 @@ import org.json.simple.JSONObject;
 @Local
 public interface UsuarioRestServiceLocal {
 
-    JSONObject novoUsuario(Cliente usuarioJSON);
+    JSONObject createUserClient(Cliente usuarioJSON);
+    JSONObject createUserDoctor(Medico usuarioJSON);
+    JSONObject login(String jsonUser);
+    
     
 }

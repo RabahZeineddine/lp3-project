@@ -12,7 +12,6 @@ public abstract class Usuario_ {
 	public static volatile SingularAttribute<Usuario, String> telefone;
 	public static volatile SingularAttribute<Usuario, String> endereco;
 	public static volatile SingularAttribute<Usuario, String> cpf;
-	public static volatile SingularAttribute<Usuario, String> usuario;
 	public static volatile SingularAttribute<Usuario, String> nome;
 	public static volatile SingularAttribute<Usuario, Long> id;
 	public static volatile SingularAttribute<Usuario, String> sobrenome;

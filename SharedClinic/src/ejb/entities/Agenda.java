@@ -14,12 +14,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author rabah
  */
 @Entity
+@XmlRootElement
 public class Agenda implements Serializable {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)

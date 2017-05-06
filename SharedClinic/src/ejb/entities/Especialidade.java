@@ -10,6 +10,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.xml.bind.annotation.XmlRootElement;
+
 
 /**
  *
@@ -17,14 +20,14 @@ import javax.persistence.Id;
  */
 
 @Entity
+@XmlRootElement
+@NamedQuery(name = "Especialidade.findAll",query = "SELECT e FROM Especialidade e")
 public class Especialidade implements Serializable{
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
     private long id;
     
     private String nome;
-    
-    private String descricao;
 
     public Especialidade() {
     }
@@ -45,15 +48,11 @@ public class Especialidade implements Serializable{
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    @Override
+    public String toString() {
+        return "{id:" + id + ", nome:" + nome + '}';
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-    
-    
     
     
     

@@ -8,17 +8,22 @@ package ejb.entities;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author rabah
  */
 @Entity
+@XmlRootElement
 public class Medico  extends Usuario implements Serializable{
     private String crm;
     
     @OneToOne
     private Agenda agenda;
+    
+    @OneToOne
+    private Especialidade especialidade;
 
     public String getCrm() {
         return crm;
