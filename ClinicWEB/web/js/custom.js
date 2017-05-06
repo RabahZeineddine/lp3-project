@@ -22,8 +22,8 @@ function createUser() {
 
     if (USER_TYPE.localeCompare("medico")==0) {
         var select = document.getElementById('especialidades');
-        alert(select.options.selectedIndex);
-        user.especialidade =  {id:select.options[select.selectedIndex], nome: document.getElementById('especialidades').innerHTML};
+        alert(select.selectedIndex);
+        user.especialidade =  {id:select.selectedIndex, nome: select.selectedIndex.text};
         user.crm = document.getElementById('crm').value;
         CREATE_PATH = "createUserDoctor";
     } else {
