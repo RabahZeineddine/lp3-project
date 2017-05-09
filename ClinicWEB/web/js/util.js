@@ -85,13 +85,13 @@ function xhrPost(url, data, callback, errback){
 	xhr.send(JSON.stringify(data));
 }
 
-function xhrDelete(url, callback, errback){	
+function xhrDelete(url,data, callback, errback){	
 	var xhr = new createXHR();
 	xhr.open("DELETE", url, true);
 	xhr.onreadystatechange = function(){
 		if(xhr.readyState == 4){
 			if(xhr.status == 200){
-				callback();
+				callback(parseJson(xhr.responseText));
 			}else{
 				errback('service not available');
 			}
@@ -99,7 +99,7 @@ function xhrDelete(url, callback, errback){
 	};
 	xhr.timeout = 100000;
 	xhr.ontimeout = errback;
-	xhr.send();
+	xhr.send(JSON.stringify(data));
 }
 
 function parseJson(str){
@@ -122,3 +122,36 @@ function objectToQuery(map){
 	return pairs.join("&");
 }
 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+} 
+
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+} 
+
+
+function checkCookie() {
+    var username = getCookie("username");
+    if (username != "") {
+        return true;
+    } else {
+        return false;
+    }
+} 

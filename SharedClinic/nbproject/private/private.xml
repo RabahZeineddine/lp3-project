@@ -7,8 +7,12 @@
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/entities/Consulta.java</file>
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/entities/Usuario.java</file>
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/META-INF/persistence.xml</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/beans/EspecialidadeBeanRemote.java</file>
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/entities/Especialidade.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/entities/Agenda.java</file>
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/beans/UsuarioBeanRemote.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/beans/ConsultaBeanRemote.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/SharedClinic/src/ejb/entities/Cliente.java</file>
         </group>
     </open-files>
 </project-private>

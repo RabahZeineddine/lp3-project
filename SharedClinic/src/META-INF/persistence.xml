@@ -5,7 +5,6 @@
     <class>ejb.entities.Agenda</class>
     <class>ejb.entities.Cliente</class>
     <class>ejb.entities.Consulta</class>
-    <class>ejb.entities.Consultorio</class>
     <class>ejb.entities.Medico</class>
     <class>ejb.entities.Usuario</class>
     <jta-data-source>java:/DerbyDS</jta-data-source>

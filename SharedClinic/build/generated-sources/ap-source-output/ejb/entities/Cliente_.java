@@ -1,7 +1,6 @@
 package ejb.entities;
 
 import javax.annotation.Generated;
-import javax.persistence.metamodel.ListAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
@@ -10,7 +9,6 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Cliente_ extends ejb.entities.Usuario_ {
 
 	public static volatile SingularAttribute<Cliente, String> rg;
-	public static volatile ListAttribute<Cliente, Consulta> consultas;
 
 }
 

@@ -28,7 +28,7 @@ public class EspecialidadeBean implements EspecialidadeBeanRemote {
     public List<Especialidade> findAll() {
         List<Especialidade> especialidades = new ArrayList<>();
         Query query = em.createNamedQuery("Especialidade.findAll");
-        especialidades = query.getResultList();
+        especialidades = (query.getResultList().size()>0)?query.getResultList():null;
         return especialidades;
     }
 

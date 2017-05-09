@@ -5,7 +5,10 @@
  */
 package ejb.beans;
 
+import ejb.entities.Cliente;
+import ejb.entities.Medico;
 import ejb.entities.Usuario;
+import java.util.List;
 import javax.ejb.Remote;
 
 /**
@@ -17,4 +20,11 @@ public interface UsuarioBeanRemote {
     Usuario criarUsuario(Usuario u);
     Usuario findByEmail(String email);
     Usuario findByCPF(String cpf);
+    Usuario findById(long id);
+    Usuario atualizarUsuario(Usuario u);
+    boolean remove(long id);
+    List<Medico> findAllMedicosByEspecialidade(long id);
+    Cliente findClienteById(long id);
+    Medico findByAgendaId(long id);
+    
 }

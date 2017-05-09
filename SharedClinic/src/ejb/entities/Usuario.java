@@ -6,6 +6,8 @@
 package ejb.entities;
 
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -42,6 +44,9 @@ public  class Usuario implements Serializable {
     protected String cpf;
     private String endereco;
     private String telefone;
+    
+    @Column(insertable = false, updatable = false)
+    private String dtype;
 
     public Usuario() {
 
@@ -111,4 +116,25 @@ public  class Usuario implements Serializable {
         this.telefone = telefone;
     }
 
+    public String getDtype() {
+        return dtype;
+    }
+
+    public void setDtype(String dtype) {
+        this.dtype = dtype;
+    }
+
+    public  void setAgenda(Agenda agenda){}
+
+    public  void setCrm(String string){}
+        
+
+    public void setEspecialidade(Especialidade especialidade){};
+
+    public void setConsultas(List<Consulta> consultas) {
+    }
+    
+   
+    
+    
 }

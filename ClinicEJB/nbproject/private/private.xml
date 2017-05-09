@@ -5,7 +5,13 @@
         <group>
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/rest/UsuarioRestService.java</file>
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/rest/UsuarioRestServiceLocal.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/rest/EspecialidadeRestService.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/rest/ConsultaRestService.java</file>
             <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/UsuarioBean.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/rest/EspecialidadeRestServiceLocal.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/rest/ConsultaRestServiceLocal.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/ConsultaBean.java</file>
+            <file>file:/Users/rabah/Box%20Sync/Mackenzie/4%20sem/Linguagem%20de%20programação%20III%20-%20Lab/project/ClinicEJB/src/java/ejb/beans/EspecialidadeBean.java</file>
         </group>
     </open-files>
 </project-private>

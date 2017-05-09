@@ -16,8 +16,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 /**
  *
@@ -41,7 +39,6 @@ public class EspecialidadeRestService implements EspecialidadeRestServiceLocal {
     @Override
     public JSONArray findAll() {
         System.out.println("Find all especialidades method invoked..");
-        JSONParser parser = new JSONParser();
         List<Especialidade> especialidades;
         especialidades = especialidadeBean.findAll();
         JSONArray esp = new JSONArray();

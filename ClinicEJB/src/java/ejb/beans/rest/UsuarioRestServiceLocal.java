@@ -21,6 +21,12 @@ public interface UsuarioRestServiceLocal {
     JSONObject createUserClient(Cliente usuarioJSON);
     JSONObject createUserDoctor(Medico usuarioJSON);
     JSONObject login(String jsonUser);
+    JSONObject updateUserClient(Cliente usuarioJSON);
+    JSONObject updateUserDoctor(Medico usuarioJSON);
+    JSONObject removeAccount(long id);
+    
+    
+    
     
     
 }

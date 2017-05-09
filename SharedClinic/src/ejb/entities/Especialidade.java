@@ -32,6 +32,11 @@ public class Especialidade implements Serializable{
     public Especialidade() {
     }
 
+    public Especialidade(long id) {
+        this.id = id;
+        
+    }
+
     public long getId() {
         return id;
     }
