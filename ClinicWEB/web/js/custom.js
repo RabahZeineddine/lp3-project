@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-
+var URI = "http://192.168.1.101:8080/ClinicWEB/UsersManager";
 var CREATE_PATH, UPDATE_PATH,DELETE_PATH;
 var USER_TYPE;
 var LOGGED_USER;
@@ -33,7 +33,7 @@ function createUser() {
     alert(JSON.stringify(user));
 //        consultas : [{horario: new Date(),dataConsulta: new Date(),status: "Done"},{horario: new Date(),dataConsulta: new Date(),status: "Done"}]};
 
-    xhrPut('/ClinicWEB/UsersManager/users/' + CREATE_PATH, JSON.stringify(user), function (data) {
+    xhrPut(URI+'/users/'+ CREATE_PATH, JSON.stringify(user), function (data) {
         if (!data.error) {
             alert(data.msg);
         } else {
@@ -50,7 +50,7 @@ function radioChange(radio) {
     document.getElementById('login-btn').disabled = false;
     if (USER_TYPE.localeCompare("medico") == 0) {
         document.getElementById('newInput').innerHTML = '<img style="width:40px;" src="img/loading.gif"/>';
-        xhrGet('/ClinicWEB/UsersManager/Especialidades/getAll', function (data) {
+        xhrGet(URI+'/Especialidades/getAll', function (data) {
 
             var select = '<select id="especialidades"><option value="">Selecione uma especialidade</option>';
 
@@ -60,6 +60,7 @@ function radioChange(radio) {
             }
             select += '</select><br><input type="text" id="crm" placeholder="CRM"/>';
             document.getElementById('newInput').innerHTML = select;
+            maskInputs();
         }, function (err) {
             console.log(err);
             alert('um erro ocorreu!');
@@ -67,6 +68,7 @@ function radioChange(radio) {
 //        document.getElementById('newInput').innerHTML = '<br><input type="text" id="crm" placeholder="CRM"/>';
     } else {
         document.getElementById('newInput').innerHTML = '<br><input type="text" id="rg" placeholder="RG"/>';
+        maskInputs();
     }
 }
 
@@ -75,7 +77,7 @@ function loginUser() {
 
     var user = {email: document.getElementById('login_email').value,
         senha: document.getElementById('login_password').value};
-    xhrPost('/ClinicWEB/UsersManager/users/login', user, function (data) {
+    xhrPost(URI+'/users/login', user, function (data) {
         if (!data.error && data.authorized) {
             alert(data.msg);
             LOGGED_USER = data.user;
@@ -103,7 +105,7 @@ function makeUserLogged() {
             '<input type="text" id="update_endereco" placeholder="endereco" value="' + LOGGED_USER.endereco + '"/></br>' +
             '<input type="text" id="update_telefone" placeholder="telefone" value="' + LOGGED_USER.telefone + '"/></br>';
     if (LOGGED_USER.dtype == "Medico") {
-        xhrGet('/ClinicWEB/UsersManager/Especialidades/getAll', function (data) {
+        xhrGet(URI+'/Especialidades/getAll', function (data) {
 
             var select = '<select id="update_especialidades"><option value="' + LOGGED_USER.especialidade.id + '">' + LOGGED_USER.especialidade.nome + '</option>';
 
@@ -151,7 +153,7 @@ function updateUser() {
         user.rg = document.getElementById('update_rg').value;
         UPDATE_PATH = "updateUserClient";
     }
-    xhrPut('/ClinicWEB/UsersManager/users/' + UPDATE_PATH, JSON.stringify(user), function (data) {
+    xhrPut(URI+'/users/' + UPDATE_PATH, JSON.stringify(user), function (data) {
         if (!data.error) {
             alert(data.msg);
             setCookie('user', JSON.stringify(data.user), 1);
@@ -171,7 +173,7 @@ function logout() {
 function deleteUser() {
     LOGGED_USER = JSON.parse(getCookie('user'));
     
-    xhrDelete('/ClinicWEB/UsersManager/users/removeAccount',LOGGED_USER,function(data){
+    xhrDelete(URI+'/users/removeAccount',LOGGED_USER,function(data){
         alert(data.msg);
     },function(err){
         console.log(err);

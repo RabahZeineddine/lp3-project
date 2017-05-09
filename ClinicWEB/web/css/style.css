@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@font-face {
+    font-family: sweet;
+    src: url(sweet.ttf);
+}
+
+@font-face {
+    font-family: queen;
+    src: url(queen.ttf);
+}
+
+@font-face{
+    font-family: basictitlefont;
+    src: url(basictitlefont.ttf);
+}
+
+
+* {
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+html,
+body {
+    height: 100% ;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+.alert{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+.dissmiss-alert{
+    position: relative;
+    top: -20px;
+    right: -20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.alert-link{
+    color: blue;
+}
+
+
+#introduction {
+    text-align: center;
+}
+
+.sobre {
+    color: white; 
+    font-family:sweet;
+    font-size:70pt;
+    margin-bottom:5px; 
+    
+}
+.branco{
+    color: white;
+}
+#introduction div{
+    height: 725px;
+}
+
+
+#intro {
+    margin-top: 320px;
+}
+
+
+.sobre-p {
+    font-size: 17pt;
+    margin: 65px;
+    font-family: basictitlefont;
+}
+
+
+#about div{
+    height: 680px;
+}
+
+#about p{
+    font-family: basictitlefont;
+}
+#sob {
+    margin-top: 80px;
+}
+
+
+
+.serv-p {
+    margin: 37px 65px 54px 65px;
+    font-size: 17pt;
+    font-family: basictitlefont;
+}
+
+#serv-div div p {
+    font-family: basictitlefont;
+    font-size: 13pt;
+}
+
+#serv-div {
+    font-family: basictitlefont;
+}
+
+#serv-div a{
+        color: white;
+}
+
+#serv-div a img:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+#porque-div p{
+    font-family: basictitlefont;
+}
+
+#porque-div h4{
+    font-family: basictitlefont;
+}
+
+#porque-div {
+    margin-top: 68px;
+}
+
+#porque-div p{
+    font-size: 14pt;
+}
+
+#porque {
+    opacity: 0.8;
+}
+
+
+
+/*===Header===*/
+
+.header {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    z-index: 99;
+    margin: 20px 0 0 0;
+    padding: 0 20px;
+    opacity: 0.9;
+}
+
+.logo img {
+    width: 70px;
+}
+
+.nav-wrapper {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.nav-wrapper div {
+    width: 50%;
+}
+
+.nav-wrapper .left-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.nav-wrapper .right-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-wrapper div ul li {
+    padding: 4px;
+}
+
+.nav-wrapper div ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+.cadastrar-li {
+    border-right: 1px solid #fff;
+}
+
+#redes_sociais {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#redes_sociais li {
+    margin-left: 15px;
+}
+
+#redes_sociais li a img {
+    width: 30px;
+}
+
+.termsOfUse {
+    border-left: 1px solid #fff;
+}
+
+#copyright {
+    font-size: 10pt;
+}
+
+
+/* Cadastro */
+
+.cadastro-main {
+    background-image: url(../img/cadastro/fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: -20px;
+    box-shadow: 0px 0px 0px #fff;
+}
+
+.cadastro-form {
+    padding-top: 150px;
+    box-shadow: 0px 0px 0px #fff;
+}
+
+#hearthy-cad {
+    color: white;
+    font-family: sweet;
+    font-size: 35pt;
+}
+
+#perfil-box {
+    padding: 30px;
+}
+
+#perfil-col {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+}
+
+.cadastrar-login a {
+    background-color: white;
+    color: #767373;
+    font-weight: 600;
+    border-radius: 3px;
+}
+
+.cadastrar-login a:hover {
+    background-color: #365ba2 !important;
+    color: white;
+    border-radius: 0 !important;
+}
+
+.login-main {
+    background-image: url(../img/login/fundo.jpg);
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+}
+
+.login-main .form {
+    height: 100%;
+}
+
+.login-main .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+
+.login-main .form input {
+    background-color: white;
+    border-bottom: none;
+    border-radius: 3px;
+    /*padding-left: 10px;*/
+    width: 100%;
+    text-align: center;
+}
+
+.login-fields {
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+
+input::-moz-placeholder{
+    text-align: center;
+    padding-left: 20px;
+
+}
+input:-ms-input-placeholder{text-align: center;}
+/*,input::-webkit-input-placeholder , input::-moz-placeholder , input:-moz-placeholder*/
+
+.login-main  .form input[type="button"] {
+    border: none;
+    height: 45px;
+    font-weight: 600;
+    color: white;
+    background-color: #365ba2 ;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+
+
+/* PROFILE */
+.perfil-main{
+    background: url(../img/perfil/care.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 1200px;
+    margin-bottom: 0px;
+}
+
+.perfil-form {
+    padding-top: 150px;
+    box-shadow: 0px 0px 0px #fff;
+}
+
+.not-display {
+    display: none;
+}
+
+
+
+/* COnsulta */
+
+.consulta-main{
+    background-image: url(../img/consulta/consulta.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.consulta-main .consulta-box{
+    padding-top: 170px;
+    
+}
+
+.consulta-main .consulta-box .consulta-form{
+      background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding:30px;
+
+}
+
+#consulta_form{
+    max-height: 500px;
+    
+}
+/*.consultas-table{*/
+/*    height: 100%;*/
+/*}*/
+/*.consultas-table tbody{*/
+/*    height: 500px !important;*/
+/*    overflow: scroll !important;*/
+/*}*/

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cadastro | Hearthy</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/" href="img/home/logo2.png">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">    
+</head>
+
+<body>
+
+    <main class="cadastro-main z-depth-0">
+        <nav class="header z-depth-0 ">
+            <div class="nav-wrapper">
+                <div class="left-nav">
+                    <a href="index.html" class="logo"><img src="img/home/logo.png"></a>
+                    <ul id="nav-mobile">
+                        <li>
+                            <a href="index.html" id="hearthy-cad">
+                                Hearthy.
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="row cadastro-form z-depth-0">
+            <div id="alert" class="col l6 offset-l3"></div>
+            <div class="perfil col s8 offset-s2" id="cadastro-back">
+                <ul class="collapsible" id="perfil-col" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header active"><i class="material-icons">filter_drama</i>Cadastro</div>
+                        <div id="perfil-box">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col l6 s12">
+                                            <input id="firstname" type="text" class="validate" name="firstname">
+                                            <label for="firstname">Primeiro Nome</label>
+                                        </div>
+                                        <div class="input-field col l6 s12">
+                                            <input id="last_name" type="text" class="validate" name="lastname">
+                                            <label for="last_name">Segundo Nome</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col l6 s12">
+                                            <input id="email" type="email" class="validate" name="email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                        <div class="input-field col l6 s12">
+                                            <input id="address" type="text" class="validate" name="address">
+                                            <label for="address">Endereço</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col l6 s12">
+                                            <input id="phone" type="text" class="validate" name="phone">
+                                            <label for="phone">Telefone</label>
+                                        </div>
+                                        <div class="input-field col l6 s12">
+                                            <input id="cpf" type="text" class="validate" name="cpf">
+                                            <label for="cpf">CPF</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <p>
+                                            <input name="userType" type="radio" class="with-gap" id="cliente" value="cliente" onchange="radioChange(this)" checked/>
+                                            <label for="cliente" checked>Cliente</label>
+                                            <input name="userType" type="radio" id="medico" class="with-gap" value="medico" onchange="radioChange(this)" />
+                                            <label for="medico">Médico</label>
+                                        </p>
+                                    </div>
+                                    <div id="newInput" class="row">
+                                        <div class="input-field col l6 s12">
+                                            <input id="rg" type="text" class="validate" name="rg">
+                                            <label for="rg">RG</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row pass">
+                                        <div class="input-field col l6 s12">
+                                            <input id="password" type="password" class="validate">
+                                            <label for="password">Senha</label>
+                                        </div>
+                                        <div class="input-field col l6 s12">
+                                            <input id="confirmPassword" type="password" class="validate">
+                                            <label for="confirmPassword">Confirmar senha</label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <button class="waves-effect waves-light btn left light-blue darken-2" onclick="createUser()">CADASTRAR</button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l12 ">
+                    <div class="col l4 s12 m4">
+                        <h5 class="white-text">Pacientes & Visitantes</h5><br>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#">Nosso Compromisso</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Encontre um médico</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Informações para Pacientes</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Informações para Visitantes</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Pague Online</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Notícias e Eventos</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col l4 s12 m4">
+                        <h5 class="white-text">Pesquisa</h5><br>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#">Casos mais Pesquisados</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Pesquisas para Profissionais</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Encontre Oportunidades</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col l4 s12 m4">
+                        <h5 class="white-text">Treinamento</h5><br>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="#">Desenvolvimento</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Enfermagem Profissional</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Treinamento Profissional</a></li>
+                            <li><a class="grey-text text-lighten-3" href="#">Desenvolvimento Profissional</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col l12">
+                    <br>
+                    <ul class="col l6 s12 ">
+                        <li class="col  policies"><a id="link" class="grey-text text-lighten-3" href="#">Política de Privacidade</a></li>
+                        <li class="col  termsOfUse"><a class="grey-text text-lighten-3" href="#">Termos de Uso</a></li>
+                    </ul>
+
+                    <ul id="redes_sociais" class="col l6 s12">
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank"><img src="img/social_media/facebook.png" onmouseover="changePic(this,'facebook2')" onmouseout="changePic(this,'facebook')" alt="facebook" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com" target="_blank"><img src="img/social_media/twitter.png" onmouseover="changePic(this,'twitter2')" onmouseout="changePic(this,'twitter')" alt="twitter" /></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><img src="img/social_media/google.png" onmouseover="changePic(this,'google2')" onmouseout="changePic(this,'google')" alt="google plus" /></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/" target="_blank"><img src="img/social_media/linkedin.png" onmouseover="changePic(this,'linkedin2')" onmouseout="changePic(this,'linkedin')" alt="linkedin" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div id="copyright">
+                    Copyright ©2017 Hearthy Corporation. Todos os direitos reservados.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>
